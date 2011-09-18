@@ -33,4 +33,9 @@ describe 'Proc' do
     f = Proc.new { |x| x }
     f.lambda?.should be_false
   end
+
+  it 'should be a proc when `proc` is used' do
+    f = proc { |x| x }
+    f.lambda?.should be_false
+  end
 end
