@@ -1,5 +1,5 @@
 describe 'Lambda' do
-  it 'should return from the closure' do
+  it 'should return from the lambda' do
     def foo
       f = lambda { return :lambda }
       f.call

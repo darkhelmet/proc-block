@@ -1,5 +1,5 @@
 describe 'Proc' do
-  it 'should return from the method' do
+  it 'should return from the closure' do
     def foo
       f = Proc.new { return :proc }
       f.call

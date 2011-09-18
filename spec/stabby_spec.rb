@@ -1,5 +1,5 @@
 describe 'Stabby' do
-  it 'should return from the closure' do
+  it 'should return from the stabby' do
     def foo
       f = -> { return :lambda }
       f.call
