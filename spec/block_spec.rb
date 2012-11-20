@@ -49,4 +49,17 @@ describe 'Block' do
 
     foo { |*args| args }.should eq([1, 2, 3])
   end
+
+  it 'should accept default args' do
+    def foo(*things)
+      if things.first
+        yield(things.first)
+      else
+        yield
+      end
+    end
+
+    foo { |x = 1|  x }.should eq(1)
+    foo(2) { |x = 1|  x }.should eq(2)
+  end
 end

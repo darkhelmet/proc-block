@@ -28,4 +28,10 @@ describe 'Stabby' do
     f = ->(x) { x }
     f.lambda?.should be_true
   end
+
+  it 'should accept default args' do
+    f = ->(x = 1) { x }
+    f.call.should eq(1)
+    f.call(2).should eq(2)
+  end
 end

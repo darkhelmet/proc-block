@@ -38,4 +38,10 @@ describe 'Proc' do
     f = proc { |x| x }
     f.lambda?.should be_false
   end
+
+  it 'should accept default args' do
+    f = proc { |x = 1| x }
+    f.call.should eq(1)
+    f.call(2).should eq(2)
+  end
 end
